@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/nickofthyme/target-case-study/precache-manifest.a4f5020e5fd25a796610de59d935b3aa.js"
+  "/target-case-study/precache-manifest.9bcb84bfeb1bc2e9d577841f9d69a184.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/nickofthyme/target-case-study/index.html", {
+workbox.routing.registerNavigationRoute("/target-case-study/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
