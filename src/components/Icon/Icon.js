@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled';
 
 const getUrl = (name) => {
-  return `/static/assets/${name}.svg`;
+  return `./static/assets/${name}.svg`;
 }
 
 const getSize = ({ small, large, size }) => {

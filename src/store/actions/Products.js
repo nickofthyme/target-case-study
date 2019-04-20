@@ -8,7 +8,7 @@ export const loadProducts = () => async (dispatch) => {
       data: {
         CatalogEntryView: products,
       },
-    } = await axois('/static/item-data.json');
+    } = await axois('./static/item-data.json');
 
     dispatch({
       type: types.PRODUCTS_SET_PRODUCTS,

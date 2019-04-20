@@ -7,7 +7,7 @@ import { HashRouter, Route } from "react-router-dom";
 import { theme, globals } from './styles'
 import { ProductList, ProductDetail } from './views';
 
-const StyledRouter = styled(HashRouter)`
+const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 `;
@@ -15,10 +15,12 @@ const StyledRouter = styled(HashRouter)`
 const App = () => (
   <ThemeProvider theme={theme}>
     <Global styles={globals} />
-    <StyledRouter>
-      <Route path="/" exact component={ProductList} />
-      <Route path="/products/:productId" component={ProductDetail} />
-    </StyledRouter>
+    <Container>
+      <HashRouter>
+        <Route path="/" exact component={ProductList} />
+        <Route path="/products/:productId" component={ProductDetail} />
+      </HashRouter>
+    </Container>
   </ThemeProvider>
 );
 
