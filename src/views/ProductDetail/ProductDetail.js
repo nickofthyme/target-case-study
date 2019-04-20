@@ -17,7 +17,7 @@ const DetailsContainer = styled.div`
   margin: ${({theme}) => theme.gp * 4}px;
   flex-direction: row;
 
-  ${mq.small} {
+  @media only screen and (max-width: 600px) {
     flex-direction: column;
     margin: 0;
   }
@@ -38,7 +38,7 @@ const ColumnContainer = styled.div`
 const MainActions = styled.div`
   display: flex;
 
-  ${mq.small} {
+  @media only screen and (max-width: 600px) {
     flex-direction: column;
   }
 `
