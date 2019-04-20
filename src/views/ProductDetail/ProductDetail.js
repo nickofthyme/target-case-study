@@ -5,16 +5,22 @@ import styled from '@emotion/styled';
 import dayjs from 'dayjs'
 import isBetween from 'dayjs/plugin/isBetween'
 
+import { mq } from '../../styles';
 import { ProductActions } from '../../store/actions';
 import { Carousel, Icon, Button } from '../../components';
 import ProductReviews from './ProductReviews';
 
 dayjs.extend(isBetween)
 
-const RowContainer = styled.div`
+const DetailsContainer = styled.div`
   display: flex;
   margin: ${({theme}) => theme.gp * 4}px;
   flex-direction: row;
+
+  ${mq.small} {
+    flex-direction: column;
+    margin: 0;
+  }
 `;
 
 const ColumnContainer = styled.div`
@@ -31,6 +37,10 @@ const ColumnContainer = styled.div`
 
 const MainActions = styled.div`
   display: flex;
+
+  ${mq.small} {
+    flex-direction: column;
+  }
 `
 
 const SecondaryActions = styled.div`
@@ -181,7 +191,7 @@ const ProductDetail = ({ match, loadProduct, product }) => {
     } = product;
 
     return (
-      <RowContainer>
+      <DetailsContainer>
         <ColumnContainer>
           <h1 className="title light">{title}</h1>
           <Carousel images={ getImages(product.Images) } />
@@ -239,7 +249,7 @@ const ProductDetail = ({ match, loadProduct, product }) => {
 
           <Button style={{ width: '50%' }} medium>Full Overview</Button>
         </ColumnContainer>
-      </RowContainer>
+      </DetailsContainer>
     );
   }
 
