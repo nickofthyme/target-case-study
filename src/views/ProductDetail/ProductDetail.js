@@ -5,7 +5,6 @@ import styled from '@emotion/styled';
 import dayjs from 'dayjs'
 import isBetween from 'dayjs/plugin/isBetween'
 
-import { mq } from '../../styles';
 import { ProductActions } from '../../store/actions';
 import { Carousel, Icon, Button } from '../../components';
 import ProductReviews from './ProductReviews';
