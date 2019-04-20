@@ -17,7 +17,7 @@ const getTypeTheme = ({ primary, secondary, theme }) => {
   return `
     background-color: ${theme.grey};
     color: ${theme.primaryColor};
-  `
+  `;
 }
 
 const getSizeValues = ({ small, medium, theme }) => {

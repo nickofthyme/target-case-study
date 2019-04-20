@@ -109,12 +109,12 @@ const Highlights = styled.div`
   }
 `
 
-const ProductDetail = ({ productId, loadProduct, product }) => {
+const ProductDetail = ({ match, loadProduct, product }) => {
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
-    loadProduct(productId);
-  }, [productId]);
+    loadProduct(match.params.productId);
+  }, [match.params.productId]);
 
   const getImages = ([image]) => {
     const {

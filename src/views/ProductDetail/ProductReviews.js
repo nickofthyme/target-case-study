@@ -72,7 +72,7 @@ const ProductReviews = ({ reviews, pro, con, rating }) => {
         <h3 className="bold">{title}</h3>
         <p>{review}</p>
         <br/>
-        <p><a href="">{screenName}</a> | {date}</p>
+        <p><a href="/">{screenName}</a> | {date}</p>
       </Review>
     );
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { navigate } from '@reach/router';
+import { Link } from 'react-router-dom';
 
 const Thumbnail = styled.img`
   width: 150px;
@@ -19,24 +19,22 @@ const Details = styled.div`
   }
 `;
 
-const Container = styled.div`
+const Container = styled(Link)`
   display: flex;
   cursor: pointer;
   padding: ${({theme}) => theme.gp}px;
+  color: ${({theme}) => theme.primaryText};
 
   &:hover {
     box-shadow: 0 0 0 1px #45495A25, 0 3px 6px 0 #45495A45;
+    text-decoration: none;
   }
 `;
-
-const selectProduct = (productId) => {
-  navigate(`products/${productId}`);
-};
 
 const Product = ({
   id, title, description, image,
 }) => (
-  <Container onClick={ () => selectProduct(id) }>
+  <Container to={`products/${id}`}>
     <Thumbnail src={ image } alt={ image } />
 
     <Details>
